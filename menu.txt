@@ -1,7 +1,6 @@
 Ristorante DevelHope
 
 Antipasti:
-
 -Bruschette con pomodorini
 -Misto di formaggi x2
 -Fritto misto x2
@@ -22,6 +21,9 @@ Secondi piatti:
 -Carne alla pizzaiola
 -Cozze gratinate
 
-
-
-Dessert: Nunzio
+Dessert:
+-Cannoli siciliani
+-Tiramisu'
+-Torta al limone
+-Torta della nonna
+-Sorbetto al cantalupo
