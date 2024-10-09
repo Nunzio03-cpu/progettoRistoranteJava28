@@ -8,7 +8,13 @@ Antipasti:
 -Patatine fritte
 -Insalata di polipo
 
-Primi piatti: Mary
+Primi piatti:
+-Linguine con vongole
+-Carbonara
+-Fettuccine ricci e gamberi
+-Farfalette con salmone e panna
+-Risotto speck e funghi
+
 
 Secondi piatti : Biagio
 Dessert: Nunzio
