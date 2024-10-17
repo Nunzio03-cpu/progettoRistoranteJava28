@@ -12,14 +12,27 @@ Primi piatti:
 -Carbonara
 -Fettuccine ricci e gamberi
 -Farfalette con salmone e panna
--Risotto speck e funghi
+-Risotto speck e funghi                                                                                 Prezzo: 12,00 €
+ (Ingredienti:riso, speck, funghi porcini, brodo vegetale,
+  cipolla, parmigiano, olio d'oliva, sale, pepe)
 
 Secondi piatti:
--Involtini al pesce spada gratinati al pistacchio
--Spiedini di gamberi
--Fiorentina
--Carne alla pizzaiola
--Cozze gratinate
+
+-Involtini al pesce spada gratinati al pistacchio                                                       Prezzo: 18,50 €
+(Ingredienti:fettine di pesce spada, pangrattato, pistacchi tritati,
+ olio d'oliva, aglio, prezzemolo, sale, pepe, limone)
+
+-Spiedini di gamberi                                                                                    Prezzo: 11,00 €
+(Ingredienti:gamberi, olio d'oliva, aglio, prezzemolo, limone, sale, pepe)
+
+-Fiorentina                                                                                             Prezzo: 43,00 €/Kg
+(Ingredienti:bistecca di manzo (T-bone), olio d'oliva, sale grosso, pepe nero)
+
+-Carne alla pizzaiola                                                                                   Prezzo: 14,00 €
+(Ingredienti:fettine di carne di manzo, passata di pomodoro, aglio, origano, olio d'oliva, sale)
+
+-Cozze gratinate                                                                                        Prezzo: 11,50 €
+(Ingredienti:cozze, pangrattato, aglio, prezzemolo, olio d'oliva, sale, pepe)
 
 Dessert:
 -Cannoli siciliani
@@ -27,3 +40,5 @@ Dessert:
 -Torta al limone
 -Torta della nonna
 -Sorbetto al cantalupo
+
+                                                                                             Coperto a persona : 2,50 €
