@@ -10,8 +10,12 @@ Antipasti:
 Primi piatti:
 -Linguine con vongole
 -Carbonara
--Fettuccine ricci e gamberi
--Farfalette con salmone e panna
+-Linguine ricci e gamberi                                                                             Prezzo: 18,00 €
+(Ingredienti: linguine, ricci di mare, gamberetti, prezzemolo, aglio, vino bianco,
+ olio extravergine d'oliva, pepe, peperoncino, sale)
+-Farfalle salmone e panna                                                                         Prezzo: 15,00 €
+(Ingredienti: farfalle, salmone, panna fresca, vino bianco, cipolla,
+ olio extravergine d'oliva, sale, pepe)
 -Risotto speck e funghi                                                                                 Prezzo: 12,00 €
  (Ingredienti:riso, speck, funghi porcini, brodo vegetale,
   cipolla, parmigiano, olio d'oliva, sale, pepe)
