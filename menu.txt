@@ -35,10 +35,21 @@ Secondi piatti:
 (Ingredienti:cozze, pangrattato, aglio, prezzemolo, olio d'oliva, sale, pepe)
 
 Dessert:
--Cannoli siciliani
--Tiramisu'
--Torta al limone
--Torta della nonna
--Sorbetto al cantalupo
+-Cannolo siciliano (gusti copertura: cioccolato, pistacchio, canditi)                                   Prezzo: 8,00 €
+(Ingredienti:farina'00', burro, cacao, zucchero, sale, ricotta di mucca,
+ amido di mais modificato, vanillina)
 
+-Tiramisu'                                                                                              Prezzo: 8,00 €
+(Ingregienti: mascarpone, uova, savoiardi, zucchero, caffè, cacao amaro in polvere)
+
+-Torta al limone                                                                                        Prezzo: 12,00 €
+(Ingredienti: farina'00', zucchero, uova, olio di semi, succo di limone, scorza di limone,
+ lievito, burro, sale)
+
+-Torta della nonna                                                                                      Prezzo: 12,00 €
+(Ingredienti: farina'00', burro, zucchero a velo, uova, scorza di limone, sale, lievito,
+ latte intero, zucchero, amido di mais, amido di riso, pinoli)
+
+-Sorbetto al cantalupo                                                                                  Prezzo: 8,00 €
+(Ingredienti: acqua, succo di limone, scorza di limone, melone cantalupo, zucchero, sale)
                                                                                              Coperto a persona : 2,50 €
