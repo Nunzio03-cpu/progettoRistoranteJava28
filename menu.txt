@@ -1,15 +1,26 @@
 Ristorante da Marco
 
 Antipasti:
--Bruschette con pomodorini
--Misto di formaggi x2
--Fritto misto x2
--Patatine fritte
--Insalata di polipo
+-Bruschette con pomodorini                                                                              Prezzo: 12,00 €
+(Ingredienti:pane casereccio, pomodorini, basilico, olio evo)
+
+-Misto di formaggi x2                                                                                   Prezzp: 25,00 €
+(Inredienti: gorgonzola, scagliette di parmiggiano, olive, mozzarella, stuzzichini misti)
+
+-Fritto misto x2                                                                                        Prezzo: 15,00 €
+(Ingredienti: gamberi, triglie, sarde, calamari, pesciolini vari, moscardini)
+
+-Patatine fritte                                                                                        Prezzo: 6,00  €
+(Ingredienti: patate fresche tagliate a mano)
+
+-Insalata di polipo                                                                                     Prezzo : 10,00 €
+(Ingredienti: polpo, prezzemolo, succo di limone, aglio)
 
 Primi piatti:
--Linguine con vongole
--Carbonara
+-Linguine con vongole                                                                                   Prezzo: 18,00 €
+(Ingredienti: Linguine, vongole fresche, prezzemolo, aglio, olio evo)
+-Carbonara                                                                                              Prezzo: 16,00 €
+(Ingredienti: Guangiale, pecorino romano, tuorlo, pepe)
 -Linguine ricci e gamberi                                                                             Prezzo: 18,00 €
 (Ingredienti: linguine, ricci di mare, gamberetti, prezzemolo, aglio, vino bianco,
  olio extravergine d'oliva, pepe, peperoncino, sale)
