@@ -1,4 +1,4 @@
-public class Portate {
+public abstract class Portate {
     private String nomePortata;
     private Double prezzo;
     private String[] ingredienti;
@@ -34,6 +34,6 @@ public class Portate {
         this.ingredienti = ingredienti;
     }
 
-
+    public abstract void stampaDettagliPortata();
 
 }
