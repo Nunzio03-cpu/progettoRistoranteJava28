@@ -21,10 +21,10 @@ Primi piatti:
 (Ingredienti: Linguine, vongole fresche, prezzemolo, aglio, olio evo)
 -Carbonara                                                                                              Prezzo: 16,00 €
 (Ingredienti: Guangiale, pecorino romano, tuorlo, pepe)
--Linguine ricci e gamberi                                                                             Prezzo: 18,00 €
+-Linguine ricci e gamberi                                                                               Prezzo: 18,00 €
 (Ingredienti: linguine, ricci di mare, gamberetti, prezzemolo, aglio, vino bianco,
  olio extravergine d'oliva, pepe, peperoncino, sale)
--Farfalle salmone e panna                                                                         Prezzo: 15,00 €
+-Farfalle salmone e panna                                                                               Prezzo: 15,00 €
 (Ingredienti: farfalle, salmone, panna fresca, vino bianco, cipolla,
  olio extravergine d'oliva, sale, pepe)
 -Risotto speck e funghi                                                                                 Prezzo: 12,00 €
