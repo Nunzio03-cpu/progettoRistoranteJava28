@@ -3,6 +3,72 @@ public class Main {
 
         System.out.println("Ristorante da Marco");
 
+        Portate linguineVongole = new PrimiPiatti("Linguine alle vongole", 18.00d, "linguine");
+
+        linguineVongole.aggiungiIngredienti("pasta, ");
+        linguineVongole.aggiungiIngredienti("vongole fresche, ");
+        linguineVongole.aggiungiIngredienti("prezzemolo, ");
+        linguineVongole.aggiungiIngredienti("aglio, ");
+        linguineVongole.aggiungiIngredienti("olio evo.");
+        linguineVongole.aggiungiIngredienti("");
+
+        linguineVongole.stampaDettagliPortata();
+
+        Portate carbonara = new PrimiPiatti("Carbonara", 16.00d, "rigatoni");
+
+        carbonara.aggiungiIngredienti("pasta,");
+        carbonara.aggiungiIngredienti("guanciale, ");
+        carbonara.aggiungiIngredienti("pecorino romano, ");
+        carbonara.aggiungiIngredienti("tuorlo d'uovo, ");
+        carbonara.aggiungiIngredienti("pepe.");
+        carbonara.aggiungiIngredienti("");
+
+        carbonara.stampaDettagliPortata();
+
+        Portate spaghettiRicciEGamberi = new PrimiPiatti("Spaghetti ricci di mare e gamberi", 18.00d, "spaghetti");
+
+        spaghettiRicciEGamberi.aggiungiIngredienti("pasta, ");
+        spaghettiRicciEGamberi.aggiungiIngredienti("ricci di mare, ");
+        spaghettiRicciEGamberi.aggiungiIngredienti("gamberi, ");
+        spaghettiRicciEGamberi.aggiungiIngredienti("aglio, ");
+        spaghettiRicciEGamberi.aggiungiIngredienti("prezzemolo, ");
+        spaghettiRicciEGamberi.aggiungiIngredienti("vino bianco.");
+        spaghettiRicciEGamberi.aggiungiIngredienti("sale, ");
+        spaghettiRicciEGamberi.aggiungiIngredienti("olio extravergine d'oliva, ");
+        spaghettiRicciEGamberi.aggiungiIngredienti("pepe, ");
+        spaghettiRicciEGamberi.aggiungiIngredienti("peperoncino.");
+        spaghettiRicciEGamberi.aggiungiIngredienti("");
+
+        spaghettiRicciEGamberi.stampaDettagliPortata();
+
+        Portate farfallePannaESalmone = new PrimiPiatti("Farfalle panna e salmone", 15.00d, "farfalle");
+
+        farfallePannaESalmone.aggiungiIngredienti("pasta, ");
+        farfallePannaESalmone.aggiungiIngredienti("salmone, ");
+        farfallePannaESalmone.aggiungiIngredienti("panna fresca, ");
+        farfallePannaESalmone.aggiungiIngredienti("vino bianco, ");
+        farfallePannaESalmone.aggiungiIngredienti("cipolla.");
+        farfallePannaESalmone.aggiungiIngredienti("olio extravergine d'oliva, ");
+        farfallePannaESalmone.aggiungiIngredienti("sale, ");
+        farfallePannaESalmone.aggiungiIngredienti("pepe.");
+        farfallePannaESalmone.aggiungiIngredienti("");
+
+        spaghettiRicciEGamberi.stampaDettagliPortata();
+
+        Portate risottoSpeckEFunghi = new PrimiPiatti("Risotto speck e funghi", 12.00d, "riso parbloid");
+
+        risottoSpeckEFunghi.aggiungiIngredienti("riso, ");
+        risottoSpeckEFunghi.aggiungiIngredienti("speck, ");
+        risottoSpeckEFunghi.aggiungiIngredienti("funghi porcini, ");
+        risottoSpeckEFunghi.aggiungiIngredienti("brodo vegetale, ");
+        risottoSpeckEFunghi.aggiungiIngredienti("cipolla, ");
+        risottoSpeckEFunghi.aggiungiIngredienti("parmigiano, ");
+        risottoSpeckEFunghi.aggiungiIngredienti("olio d'oliva, ");
+        risottoSpeckEFunghi.aggiungiIngredienti("sale, ");
+        risottoSpeckEFunghi.aggiungiIngredienti("pepe.");
+        risottoSpeckEFunghi.aggiungiIngredienti("");
+
+        risottoSpeckEFunghi.stampaDettagliPortata();
 
         Portate secondoSpada = new SecondiPiatti("Involtini al pesce spada", 18.50d, " cotto al forno");
 
