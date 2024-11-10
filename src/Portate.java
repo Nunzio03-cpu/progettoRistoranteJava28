@@ -1,13 +1,15 @@
+import java.util.ArrayList;
+
 public abstract class Portate {
     private String nomePortata;
     private Double prezzo;
-    private String[] ingredienti;
+    private ArrayList<String> ingredienti;
 
 
-    public Portate(String nomePortata, Double prezzo, String[] ingredienti) {
+    public Portate(String nomePortata, Double prezzo) {
         this.nomePortata = nomePortata;
         this.prezzo = prezzo;
-        this.ingredienti = ingredienti;
+        this.ingredienti = new ArrayList<>();
     }
 
     public String getNomePortata() {
@@ -26,14 +28,34 @@ public abstract class Portate {
         this.prezzo = prezzo;
     }
 
-    public String[] getIngredienti() {
+    public ArrayList<String> getIngredienti() {
         return ingredienti;
     }
 
-    public void setIngredienti(String[] ingredienti) {
-        this.ingredienti = ingredienti;
+
+    public void aggiungiIngredienti(String ingrediente){
+        if(!this.ingredienti.contains(ingrediente)){
+            this.ingredienti.add(ingrediente);
+        } else {
+            System.out.println("Ingrediente non presente");
+        }
     }
 
-    public abstract void stampaDettagliPortata();
+    public void rimuoviIngredienti(String ingrediente){
+        this.ingredienti.remove(ingrediente);
+    }
+
+    public  void stampaDettagliPortata(){
+        System.out.println(Color.GIALLO + "Nome: " + getNomePortata() + Color.RESET);
+        System.out.println(Color.ROSSO + "Prezzo: " + getPrezzo() + " €" + Color.RESET);
+        System.out.println(Color.BLU + "Ingredienti: " +    Color.RESET);
+        for(String ingrediente : ingredienti){
+            System.out.print(Color.BLU + ingrediente  +  Color.RESET);
+        }
+        System.out.println();
+
+
+
+    }
 
 }
