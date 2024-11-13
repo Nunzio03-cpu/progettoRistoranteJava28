@@ -3,13 +3,14 @@ import java.util.ArrayList;
 public abstract class Portate {
     private String nomePortata;
     private Double prezzo;
-    private ArrayList<String> ingredienti;
+    private String ingredienti; // tutti gli ingredienti in una sola stringa
 
 
-    public Portate(String nomePortata, Double prezzo) {
+
+    public Portate(String nomePortata, Double prezzo, String ingredienti) {
         this.nomePortata = nomePortata;
         this.prezzo = prezzo;
-        this.ingredienti = new ArrayList<>();
+        this.ingredienti = ingredienti;
     }
 
     public String getNomePortata() {
@@ -28,34 +29,18 @@ public abstract class Portate {
         this.prezzo = prezzo;
     }
 
-    public ArrayList<String> getIngredienti() {
+    public String getIngredienti() {
         return ingredienti;
     }
 
 
-    public void aggiungiIngredienti(String ingrediente){
-        if(!this.ingredienti.contains(ingrediente)){
-            this.ingredienti.add(ingrediente);
-        } else {
-            System.out.println("Ingrediente non presente");
-        }
-    }
-
-    public void rimuoviIngredienti(String ingrediente){
-        this.ingredienti.remove(ingrediente);
-    }
-
     public  void stampaDettagliPortata(){
-        System.out.println(Color.GIALLO + "Nome: " + getNomePortata() + Color.RESET);
-        System.out.println(Color.ROSSO + "Prezzo: " + getPrezzo() + " €" + Color.RESET);
-        System.out.println(Color.BLU + "Ingredienti: " +    Color.RESET);
-        for(String ingrediente : ingredienti){
-            System.out.print(Color.BLU + ingrediente  +  Color.RESET);
-        }
-        System.out.println();
-
+        System.out.print(ColorEnum.GIALLO.getCodiceColore() + "Nome: " + getNomePortata() + ColorEnum.RESET.getCodiceColore());
+        System.out.println(ColorEnum.ROSSO.getCodiceColore() + " Prezzo: " + getPrezzo() + " €" + ColorEnum.RESET.getCodiceColore());
+        System.out.println(ColorEnum.BLU.getCodiceColore() + "Ingredienti: " +  String.join(", ", ingredienti)  +  ColorEnum.RESET.getCodiceColore());
 
 
     }
+
 
 }

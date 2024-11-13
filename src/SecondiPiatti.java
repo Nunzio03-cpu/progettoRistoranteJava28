@@ -3,9 +3,10 @@ import java.util.ArrayList;
 public class SecondiPiatti extends Portate{
     private String metodoCottura;
 
-    public SecondiPiatti(String nomePortata, Double prezzo, String metodoCottura) {
-        super(nomePortata, prezzo);
+    public SecondiPiatti(String nomePortata, Double prezzo, String ingredienti, String metodoCottura) {
+        super(nomePortata, prezzo, ingredienti);
         this.metodoCottura = metodoCottura;
+
     }
 
     public String getMetodoCottura() {
@@ -20,10 +21,9 @@ public class SecondiPiatti extends Portate{
 
     @Override
     public void stampaDettagliPortata() {
-        System.out.println();
-        System.out.println("Secondi Piatti: ");
         super.stampaDettagliPortata();
-        System.out.println(Color.VERDE + "tipo di cottura: " + getMetodoCottura() + Color.RESET);
+        System.out.println(ColorEnum.VERDE.getCodiceColore() + "tipo di cottura: " + getMetodoCottura() + ColorEnum.RESET.getCodiceColore());
+        System.out.println();
 
     }
 }

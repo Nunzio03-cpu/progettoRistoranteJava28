@@ -1,7 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Ristorante da Marco");
+
+        // Creazione della lista di portate
+        List<Portate> menu = new ArrayList<>();
+        System.out.println("Menu del Ristorante:");
 
         Portate linguineVongole = new PrimiPiatti("Linguine alle vongole", 18.00d, "linguine");
 
@@ -70,66 +77,42 @@ public class Main {
 
         risottoSpeckEFunghi.stampaDettagliPortata();
 
-        Portate secondoSpada = new SecondiPiatti("Involtini al pesce spada", 18.50d, " cotto al forno");
 
-        secondoSpada.aggiungiIngredienti("fettine di pesce spada, ");
-        secondoSpada.aggiungiIngredienti("panGrattato, ");
-        secondoSpada.aggiungiIngredienti("pistacchi tritati, ");
-        secondoSpada.aggiungiIngredienti("olio d'oliva, ");
-        secondoSpada.aggiungiIngredienti("aglio, ");
-        secondoSpada.aggiungiIngredienti("prezzemolo, ");
-        secondoSpada.aggiungiIngredienti("sale, ");
-        secondoSpada.aggiungiIngredienti("pepe, ");
-        secondoSpada.aggiungiIngredienti("limone");
-        secondoSpada.rimuoviIngredienti("");
 
-        secondoSpada.stampaDettagliPortata();
+        System.out.println("Secondi Piatti: ");
 
-        Portate secondoSpiedini = new SecondiPiatti("Spiedini di gamberi", 11.00d, "cottura su piastra");
+        Portate secondoSpada = new SecondiPiatti("Involtini al pesce spada gratinati al pistacchio", 18.50d,
+                "fettine di pesce spada, pangrattato, pistacchi tritati," +
+                        " olio d'oliva, aglio, prezzemolo, sale, pepe, limone","Al forno");
 
-        secondoSpiedini.aggiungiIngredienti("gamberi, ");
-        secondoSpiedini.aggiungiIngredienti("olio d'oliva, ");
-        secondoSpiedini.aggiungiIngredienti("aglio, ");
-        secondoSpiedini.aggiungiIngredienti("prezzemolo, ");
-        secondoSpiedini.aggiungiIngredienti("sale, ");
-        secondoSpiedini.aggiungiIngredienti("pepe, ");
-        secondoSpiedini.aggiungiIngredienti("limone");
-        secondoSpiedini.rimuoviIngredienti("");
+        Portate secondoSpiedini = new SecondiPiatti("Spiedini di gamberi", 11.00d,
+                "gamberi, olio d'oliva, aglio, prezzemolo, limone, sale, pepe",  "cottura su piastra");
 
-        secondoSpiedini.stampaDettagliPortata();
+        Portate secondoFiorentina = new SecondiPiatti("Fiorentina", 43.00d,
+                "bistecca di manzo (T-bone), olio d'oliva, sale grosso, pepe nero","alla brace");
 
-        Portate secondoFiorentina = new SecondiPiatti("Fiorentina", 43.00d,"alla brace");
+        Portate secondoCarnePizzaiola = new SecondiPiatti("Carne alla pizzaiola", 14.00d,
+                "fettine di carne di manzo, passata di pomodoro, aglio, origano, olio d'oliva, sale","in pentola");
 
-        secondoFiorentina.aggiungiIngredienti("bistecca di manzo (T-bone), ");
-        secondoFiorentina.aggiungiIngredienti("olio d'oliva, ");
-        secondoFiorentina.aggiungiIngredienti("sale grosso, ");
-        secondoFiorentina.aggiungiIngredienti("pepe nero");
-        secondoFiorentina.rimuoviIngredienti("");
 
-        secondoFiorentina.stampaDettagliPortata();
+        Portate secondoCozze = new SecondiPiatti("Cozze gratinate", 11.50d,
+                "cozze, pangrattato, aglio, prezzemolo, olio d'oliva, sale, pepe", "al forno");
 
-        Portate secondoCarnePizzaiola = new SecondiPiatti("Carne alla pizzaiola", 14.00d, "in pentola");
-        secondoCarnePizzaiola.aggiungiIngredienti("carne di manzo, ");
-        secondoCarnePizzaiola.aggiungiIngredienti("passata di pomodoro, ");
-        secondoCarnePizzaiola.aggiungiIngredienti("aglio, ");
-        secondoCarnePizzaiola.aggiungiIngredienti("origano, ");
-        secondoCarnePizzaiola.aggiungiIngredienti("olio d'oliva, ");
-        secondoCarnePizzaiola.aggiungiIngredienti("sale");
-        secondoCarnePizzaiola.rimuoviIngredienti("");
+        menu.add(secondoSpada);
+        menu.add(secondoSpiedini);
+        menu.add(secondoFiorentina);
+        menu.add(secondoCarnePizzaiola);
+        menu.add(secondoCozze);
 
-        secondoCarnePizzaiola.stampaDettagliPortata();
 
-        Portate secondoCozze = new SecondiPiatti("Cozze gratinate", 11.50d, "al forno");
-        secondoCozze.aggiungiIngredienti("cozze, ");
-        secondoCozze.aggiungiIngredienti("pangrattato, ");
-        secondoCozze.aggiungiIngredienti("aglio, ");
-        secondoCozze.aggiungiIngredienti("prezzemolo, ");
-        secondoCozze.aggiungiIngredienti("olio d'oliva, ");
-        secondoCozze.aggiungiIngredienti("sale, ");
-        secondoCozze.aggiungiIngredienti("pepe, ");
-        secondoCozze.rimuoviIngredienti("");
+        for (Portate portata : menu) {
+            if (portata instanceof SecondiPiatti) {
+                portata.stampaDettagliPortata(); // Stampa dettagli per le portate di tipo SecondiPiatti
+            }
+        }
 
-        secondoCozze.stampaDettagliPortata();
+
+
 
 
 
