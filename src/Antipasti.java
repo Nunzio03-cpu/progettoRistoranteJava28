@@ -3,6 +3,7 @@ public class Antipasti extends Portate {
     private boolean surgelato;
     private boolean fresco;
 
+
     //Costruttore con super
     public Antipasti(boolean surgelato, boolean fresco, String nomePortata, Double prezzo, String ingredienti) {
         super(nomePortata, prezzo, ingredienti);
