@@ -32,7 +32,7 @@ public class Antipasti extends Portate {
     @Override
     public void stampaDettagliPortata() {
         super.stampaDettagliPortata();
-        // Controlla se il prodotto è surgelato
+        // Controlla se il prodotto e surgelato
         if (surgelato) {
             //se è surgelato, stampa il dettaglio in verde
             System.out.println(ColorEnum.VERDE.getCodiceColore() + "Prodotto surgelato " + getSurgelato() + ColorEnum.RESET.getCodiceColore());
