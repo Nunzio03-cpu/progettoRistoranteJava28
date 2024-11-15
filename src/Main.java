@@ -40,73 +40,34 @@ public class Main {
             }
         }
 
+        System.out.println("Primi piatti: ");
 
-        Portate linguineVongole = new PrimiPiatti("Linguine alle vongole", 18.00d, "linguine");
+        Portate linguineConVongole = new PrimiPiatti("Linguine con vongole", 18.00,
+                "Pasta, vongole fresche, prezzemolo, aglio, olio evo", "Linguine");
 
-        linguineVongole.aggiungiIngredienti("pasta, ");
-        linguineVongole.aggiungiIngredienti("vongole fresche, ");
-        linguineVongole.aggiungiIngredienti("prezzemolo, ");
-        linguineVongole.aggiungiIngredienti("aglio, ");
-        linguineVongole.aggiungiIngredienti("olio evo.");
-        linguineVongole.aggiungiIngredienti("");
+        Portate carbonara = new PrimiPiatti("Carbonara", 16.00,
+                "Pasta, guanciale, pecorino romano, tuorlo, pepe", "Rigatoni");
 
-        linguineVongole.stampaDettagliPortata();
+        Portate spaghettiAiRicciDiMareEGamberi = new PrimiPiatti("Spaghetti ai ricci di mare e gamberi", 18.00,
+                "spaghetti, ricci di mare, gamberetti, prezzemolo, aglio, vino bianco," +
+                        "olio extravergine d'oliva, pepe, peperoncino, sale", "spaghetti");
 
-        Portate carbonara = new PrimiPiatti("Carbonara", 16.00d, "rigatoni");
+        Portate farfalleSalmoneEPanna = new PrimiPiatti("Farfalle Salmone e Panna", 15.00,
+                "farfalle, salmone, panna fresca, vino bianco, cipolla, olio extravergine d'oliva, sale, pepe",
+                "farfalle");
 
-        carbonara.aggiungiIngredienti("pasta,");
-        carbonara.aggiungiIngredienti("guanciale, ");
-        carbonara.aggiungiIngredienti("pecorino romano, ");
-        carbonara.aggiungiIngredienti("tuorlo d'uovo, ");
-        carbonara.aggiungiIngredienti("pepe.");
-        carbonara.aggiungiIngredienti("");
+        Portate risottoSpeckEFunghi = new PrimiPiatti("Risotto Speck e funghi", 12.00,
+                "riso, speck, funghi porcini, brodo vegetale, cipolla, parmigiano, olio d'oliva, sale, pepe",
+                "riso");
 
-        carbonara.stampaDettagliPortata();
-
-        Portate spaghettiRicciEGamberi = new PrimiPiatti("Spaghetti ricci di mare e gamberi", 18.00d, "spaghetti");
-
-        spaghettiRicciEGamberi.aggiungiIngredienti("pasta, ");
-        spaghettiRicciEGamberi.aggiungiIngredienti("ricci di mare, ");
-        spaghettiRicciEGamberi.aggiungiIngredienti("gamberi, ");
-        spaghettiRicciEGamberi.aggiungiIngredienti("aglio, ");
-        spaghettiRicciEGamberi.aggiungiIngredienti("prezzemolo, ");
-        spaghettiRicciEGamberi.aggiungiIngredienti("vino bianco.");
-        spaghettiRicciEGamberi.aggiungiIngredienti("sale, ");
-        spaghettiRicciEGamberi.aggiungiIngredienti("olio extravergine d'oliva, ");
-        spaghettiRicciEGamberi.aggiungiIngredienti("pepe, ");
-        spaghettiRicciEGamberi.aggiungiIngredienti("peperoncino.");
-        spaghettiRicciEGamberi.aggiungiIngredienti("");
-
-        spaghettiRicciEGamberi.stampaDettagliPortata();
-
-        Portate farfallePannaESalmone = new PrimiPiatti("Farfalle panna e salmone", 15.00d, "farfalle");
-
-        farfallePannaESalmone.aggiungiIngredienti("pasta, ");
-        farfallePannaESalmone.aggiungiIngredienti("salmone, ");
-        farfallePannaESalmone.aggiungiIngredienti("panna fresca, ");
-        farfallePannaESalmone.aggiungiIngredienti("vino bianco, ");
-        farfallePannaESalmone.aggiungiIngredienti("cipolla.");
-        farfallePannaESalmone.aggiungiIngredienti("olio extravergine d'oliva, ");
-        farfallePannaESalmone.aggiungiIngredienti("sale, ");
-        farfallePannaESalmone.aggiungiIngredienti("pepe.");
-        farfallePannaESalmone.aggiungiIngredienti("");
-
-        spaghettiRicciEGamberi.stampaDettagliPortata();
-
-        Portate risottoSpeckEFunghi = new PrimiPiatti("Risotto speck e funghi", 12.00d, "riso parbloid");
-
-        risottoSpeckEFunghi.aggiungiIngredienti("riso, ");
-        risottoSpeckEFunghi.aggiungiIngredienti("speck, ");
-        risottoSpeckEFunghi.aggiungiIngredienti("funghi porcini, ");
-        risottoSpeckEFunghi.aggiungiIngredienti("brodo vegetale, ");
-        risottoSpeckEFunghi.aggiungiIngredienti("cipolla, ");
-        risottoSpeckEFunghi.aggiungiIngredienti("parmigiano, ");
-        risottoSpeckEFunghi.aggiungiIngredienti("olio d'oliva, ");
-        risottoSpeckEFunghi.aggiungiIngredienti("sale, ");
-        risottoSpeckEFunghi.aggiungiIngredienti("pepe.");
-        risottoSpeckEFunghi.aggiungiIngredienti("");
-
-        risottoSpeckEFunghi.stampaDettagliPortata();
+        menu.add(linguineConVongole);
+        menu.add(carbonara);
+        menu.add(spaghettiAiRicciDiMareEGamberi);
+        menu.add(farfalleSalmoneEPanna);
+        menu.add(risottoSpeckEFunghi);
+        for (Portate portata : menu){
+            portata.stampaDettagliPortata();
+        }
 
 
         System.out.println("Secondi Piatti: ");
