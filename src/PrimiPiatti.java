@@ -16,9 +16,8 @@ public class PrimiPiatti extends Portate{
 
     @Override
     public void stampaDettagliPortata(){
-        System.out.println();
-        System.out.println("Primi Piatti: ");
         super.stampaDettagliPortata();
-        System.out.println(ColorEnum.VERDE + "tipo di pasta: " + getTipoPasta() + ColorEnum.RESET);
+        System.out.println(ColorEnum.VERDE.getCodiceColore() + "tipo di pasta: " + getTipoPasta() + ColorEnum.RESET.getCodiceColore());
+        System.out.println();
     }
 }

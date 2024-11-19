@@ -66,7 +66,9 @@ public class Main {
         menu.add(farfalleSalmoneEPanna);
         menu.add(risottoSpeckEFunghi);
         for (Portate portata : menu){
-            portata.stampaDettagliPortata();
+            if (portata instanceof PrimiPiatti) {
+                portata.stampaDettagliPortata();
+            }
         }
 
 
