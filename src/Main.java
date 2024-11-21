@@ -107,6 +107,37 @@ public class Main {
             }
         }
 
+        System.out.println("Dessert:");
+
+        Portate cannoloSiciliano = new Dessert("Cannolo Siciliano",8.00,
+                "farina'00', burro, cacao, zucchero, sale, ricotta di mucca, " +
+                        "amido di mais modificato, vanillina ", false);
+
+        Portate tiramisu = new Dessert("Tiramisu'", 8.00,"mascarpone, uova, savoiardi, " +
+                "zucchero, caffè, cacao amaro in polvere",true);
+
+        Portate tortaAlLimone = new Dessert("Torta al limone", 12.00," farina'00', zucchero, " +
+                "uova, olio di semi, succo di limone, scorza di limone, lievito, burro, sale", true );
+
+        Portate tortaDellaNonna = new Dessert("Torta della nonna ", 12.00," farina'00', burro," +
+                " zucchero a velo, uova, scorza di limone, sale, lievito, latte intero, zucchero, amido di mais, amido di riso, pinoli", true);
+
+        Portate sorbettoAlCantalupo = new Dessert("Sorbetto al cantalupo", 8.00,"acqua, succo di limone," +
+                " scorza di limone, melone cantalupo, zucchero, sale", true);
+
+        menu.add(cannoloSiciliano);
+        menu.add(tiramisu);
+        menu.add(tortaAlLimone);
+        menu.add(tortaDellaNonna);
+        menu.add(sorbettoAlCantalupo);
+
+        for (Portate portata : menu) {
+            if (portata instanceof Dessert) {
+                // Stampo i dettagli specifici dell'antipasto utilizzando il metodo della classe
+                portata.stampaDettagliPortata(); //
+            }
+        }
+
 
         System.out.println("Coperto a persona: 2.50 €");
 
