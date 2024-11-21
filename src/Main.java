@@ -9,22 +9,25 @@ public class Main {
         // Creazione della lista di portate
         List<Portate> menu = new ArrayList<>();
         System.out.println("Menu del Ristorante:");
+        System.out.println();
+        System.out.println("Antipasti: ");
+
 
         //Creazione oggetti antipasti
-        Portate bruschetteConPomodorini = new Antipasti(false, true, " Bruschette con pomodorini ", 12.00,
-                " (Ingredienti:pane casereccio, pomodorini, basilico, olio evo) ");
+        Portate bruschetteConPomodorini = new Antipasti(  "Si","Bruschette con pomodorini ",12.00,
+                "Ingredienti:pane casereccio, pomodorini, basilico, olio evo");
 
-        Portate mistoDiFormaggi = new Antipasti(false, true, " Tagliere di formaggi x2 persone ", 25.00,
-                " (Inredienti: gorgonzola, scagliette di parmiggiano, olive, mozzarella, stuzzichini misti) ");
+        Portate mistoDiFormaggi = new Antipasti( "Si", " Tagliere di formaggi x2 persone ", 25.00,
+                " Inredienti: gorgonzola, scagliette di parmiggiano, olive, mozzarella, stuzzichini misti ");
 
-        Portate frittoMisto = new Antipasti(true, false, " Fritto misto x 2 persone ", 15.00,
-                " (Ingredienti: gamberi, triglie, sarde, calamari, pesciolini vari, moscardini) ");
+        Portate frittoMisto = new Antipasti( "Si", " Fritto misto x 2 persone ", 15.00,
+                " Ingredienti: gamberi, triglie, sarde, calamari, pesciolini vari, moscardini ");
 
-        Portate patateFritte = new Antipasti(true, false, " Patatine fritte ", 6.00,
+        Portate patateFritte = new Antipasti("No, prodotto surgelato ", " Patatine fritte ", 6.00,
                 " Patate surgelate, sale ");
 
-        Portate insalataDiPolipo = new Antipasti(true, false, " Insalata di polpo ", 10.00,
-                " polpo surgelato, prezzemolo, succo di limone, aglio");
+        Portate insalataDiPolipo = new Antipasti("Si", " Insalata di polpo ", 10.00,
+                " polpo, prezzemolo, succo di limone, aglio ");
 
         //Aggiungo gli antipasti al menu
         menu.add(bruschetteConPomodorini);
