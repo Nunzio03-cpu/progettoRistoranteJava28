@@ -1,8 +1,8 @@
 public class PrimiPiatti extends Portate{
     private String tipoPasta;
 
-    public PrimiPiatti(String nomePortata, Double prezzo, String tipoPasta) {
-        super(nomePortata, prezzo);
+    public PrimiPiatti(String nomePortata, Double prezzo, String ingredienti, String tipoPasta) {
+        super(nomePortata, prezzo, ingredienti);
         this.tipoPasta = tipoPasta;
     }
 
@@ -16,9 +16,8 @@ public class PrimiPiatti extends Portate{
 
     @Override
     public void stampaDettagliPortata(){
-        System.out.println();
-        System.out.println("Primi Piatti: ");
         super.stampaDettagliPortata();
-        System.out.println(Color.VERDE + "tipo di pasta: " + getTipoPasta() + Color.RESET);
+        System.out.println(ColorEnum.VERDE.getCodiceColore() + "tipo di pasta: " + getTipoPasta() + ColorEnum.RESET.getCodiceColore());
+        System.out.println();
     }
 }

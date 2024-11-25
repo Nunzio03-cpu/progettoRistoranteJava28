@@ -11,7 +11,7 @@ Antipasti:
 (Ingredienti: gamberi, triglie, sarde, calamari, pesciolini vari, moscardini)
 
 -Patatine fritte                                                                                        Prezzo: 6,00 €
-(Ingredienti: patate fresche tagliate a mano)
+(Ingredienti: patate surgelate)
 
 -Insalata di polipo                                                                                     Prezzo : 10,00 €
 (Ingredienti: polpo, prezzemolo, succo di limone, aglio)
@@ -22,7 +22,7 @@ Primi piatti:
 -Carbonara                                                                                              Prezzo: 16,00 €
 (Ingredienti: Pasta, guanciale, pecorino romano, tuorlo, pepe)
 -Spaghetti ai ricci e gamberi                                                                           Prezzo: 18,00 €
-(Ingredienti: linguine, ricci di mare, gamberetti, prezzemolo, aglio, vino bianco,
+(Ingredienti: spaghetti, ricci di mare, gamberetti, prezzemolo, aglio, vino bianco,
  olio extravergine d'oliva, pepe, peperoncino, sale)
 -Farfalle salmone e panna                                                                               Prezzo: 15,00 €
 (Ingredienti: farfalle, salmone, panna fresca, vino bianco, cipolla,
