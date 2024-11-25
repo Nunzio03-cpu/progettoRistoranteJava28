@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
-public abstract class Portate {
+public class Portate {
     private String nomePortata;
     private Double prezzo;
-    private String ingredienti; // tutti gli ingredienti in una sola stringa
+    private final String ingredienti; // tutti gli ingredienti in una sola stringa
 
 
 
@@ -35,9 +35,18 @@ public abstract class Portate {
 
 
     public  void stampaDettagliPortata(){
-        System.out.print(ColorEnum.GIALLO.getCodiceColore() + "Nome: " + getNomePortata() + ColorEnum.RESET.getCodiceColore());
-        System.out.println(ColorEnum.ROSSO.getCodiceColore() + " Prezzo: " + getPrezzo() + " €" + ColorEnum.RESET.getCodiceColore());
-        System.out.println(ColorEnum.BLU.getCodiceColore() + "Ingredienti: " +  String.join(", ", ingredienti)  +  ColorEnum.RESET.getCodiceColore());
+        //Il metodo System.out.printf() in Java è utilizzato per formattare e stampare stringhe seguendo specifici modificatori di formato
+        //"%-n.s %s" --> %: Indica che è un segnaposto,
+        // -n.s partendo da sinistra verso destra indica lo spazio(in caratteri) da occupare vuoto
+        //n. indica il numero da inserire
+        // % aggiunta di un'altro segnaposto + s cioe indica una stringa
+        System.out.printf("%-170s %s",ColorEnum.GIALLO.getCodiceColore() + "- " + getNomePortata() + ColorEnum.RESET.getCodiceColore(),
+                ColorEnum.ROSSO.getCodiceColore() + " Prezzo: "  + getPrezzo() +  " €" + ColorEnum.RESET.getCodiceColore());
+
+        System.out.println();
+//        System.out.print( ColorEnum.GIALLO.getCodiceColore() + "Nome: " + getNomePortata() + ColorEnum.RESET.getCodiceColore());
+//        System.out.println(ColorEnum.ROSSO.getCodiceColore() +   " Prezzo: "  + getPrezzo() + " €" + ColorEnum.RESET.getCodiceColore());
+        System.out.println(ColorEnum.BLU.getCodiceColore() + "(Ingredienti: " +  String.join(", ", ingredienti) + ")"  +  ColorEnum.RESET.getCodiceColore());
 
 
     }
