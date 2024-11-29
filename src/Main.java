@@ -66,6 +66,13 @@ public class Main {
         // Stampa del menu
         menu.stampaMenu();
 
+        //prova stampa ristorante
+        Ristorante ciccio = new Ristorante("Da ciccio", "Ciccio");
+
+        ciccio.aggiungiMenu(menu);
+
+        ciccio.stampaDettagliRistorante();
+
 
 
     }
