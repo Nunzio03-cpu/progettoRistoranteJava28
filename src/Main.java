@@ -4,76 +4,108 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Ristorante da Marco");
-        System.out.println("Menu del Ristorante:");
+        //prova stampa ristorante
+        Ristorante ristorante = new Ristorante("Da Chef Marco", "Marco");
 
         // Creazione del menu
-        Menu menu = new Menu("cc", TipoMenuEnum.VEGETARIANO);
-
-        // Aggiunta delle portate: Antipasti
-        menu.aggiungiPortata(new Antipasti(  "Si","Bruschette con pomodorini ",12.00,
-                "Ingredienti:pane casereccio, pomodorini, basilico, olio evo"));
-        menu.aggiungiPortata(new Antipasti( "Si", " Tagliere di formaggi x2 persone ", 25.00,
+        Menu menuVegetariano = new Menu("Menu Vegetariano", TipoMenuEnum.VEGETARIANO);
+        //Aggiunti gli antipasti vegetariani
+        menuVegetariano.aggiungiPortata(new Antipasti("Si", " Tagliere di formaggi x2 persone ", 25.00,
                 " Inredienti: gorgonzola, scagliette di parmiggiano, olive, mozzarella, stuzzichini misti "));
-        menu.aggiungiPortata(new Antipasti( "Si", " Fritto misto x 2 persone ", 15.00,
-                " Ingredienti: gamberi, triglie, sarde, calamari, pesciolini vari, moscardini "));
-        menu.aggiungiPortata(new Antipasti("No, prodotto surgelato ", " Patatine fritte ", 6.00,
+        menuVegetariano.aggiungiPortata(new Antipasti("Si","Bruschette con pomodorini ",12.00,
+                "Ingredienti:pane casereccio, pomodorini, basilico, olio evo"));
+        menuVegetariano.aggiungiPortata(new Antipasti("Si", "Caprese con mozzarella di bufala", 15.00,
+                "Fette di pomodoro fresco, mozzarella di bufala, basilico, olio d'oliva, sale"));
+        //Aggiunta primi piatti vegetariani
+        menuVegetariano.aggiungiPortata(new PrimiPiatti("Risotto agli asparagi",10.00,
+                "Riso, asparagi freschi, scalogno, un tocco di parmiggiano", "Riso"));
+        menuVegetariano.aggiungiPortata(new PrimiPiatti("Trofie al pesto di pistacchio", 13.00,
+                "Trofie, pesto di pistacchio DOP di Bronte, pinoli tostati", "Trofie"));
+        menuVegetariano.aggiungiPortata(new PrimiPiatti("Penne alla boscaiola", 8.00,"Pasta, " +
+                "funghi, panna fresca, salsa di pomodoro, sale, olio","Penne"));
+        //Aggiunti i secondi piatti
+        menuVegetariano.aggiungiPortata(new SecondiPiatti("Involtini di melanzane al forno", 10.00,
+                "Melanzane, pane grattato, parmiggiano, olio, sale, salsa fresca di pomodoro", "Forno"));
+        menuVegetariano.aggiungiPortata(new SecondiPiatti("Frittata di zucchine", 7.00,
+                "Preparato di uovo, zucchine grattuggiate, sale, menta fresca", "Fritta con olio di semi" ));
+        menuVegetariano.aggiungiPortata(new SecondiPiatti("Burger vegetariano con patate", 14.00,
+                " Hamburger di ceci e verdure, patate, pomodoro, sale, pepe, rosmarino", "Hamburger alla piastra, patate al forno"));
+
+        //Creazione menu vegano
+        Menu menuVegano = new Menu("Menu vegano", TipoMenuEnum.VEGANO);
+        //Aggiunti gli antipasti
+        menuVegano.aggiungiPortata(new Antipasti("Si", "Hummus di ceci e verdure crude", 8.00,
+                " crema di ceci, paprika, olio d'oliva, bastoncini di carota, cetriolo, sedano"));
+        menuVegano.aggiungiPortata(new Antipasti("No, prodotto surgelato ", " Patatine fritte ", 6.00,
                 " Patate surgelate, sale "));
-        menu.aggiungiPortata(new Antipasti("Si", " Insalata di polpo ", 10.00,
+        menuVegano.aggiungiPortata(new Antipasti("Si", "Zucca in agrodolce", 8.00,
+                "Zucca, olio, aceto, zucchero, aglio, sale"));
+        //Aggiunti primi piatti
+        menuVegano.aggiungiPortata(new PrimiPiatti("Risotto allo zafferano", 13.00,
+                "Riso cremoso mantecato senza burro, zafferano, sale, pepe", "Riso"));
+        menuVegano.aggiungiPortata(new PrimiPiatti("Pasta e fagioli", 10.00,
+                "Pasta, fagioli, cipolla, olio, sale, salsa di pomodoro", "Orecchiette"));
+        menuVegano.aggiungiPortata(new PrimiPiatti("Linguine con cavolini di Bruxelles e limone", 12.00,
+                "Pasta, cavolini di Bruxelles, limone, panna di soia, senape, rosmarino tritato, sale, pepe", "Linguine"));
+        //Aggiunti secondi piatti
+        menuVegano.aggiungiPortata(new SecondiPiatti("Burger di ceci con maionese vegana", 14.00,
+                "Burger di ceci, panino integrale, lattuga, pomodoro, maionese a base di latte di soia","Alla piastra"));
+        menuVegano.aggiungiPortata(new SecondiPiatti("Tofu marinato con verdure grigliate", 15.00,
+                "Fette di tofu marinato con salsa di soia, zenzero, limone, accompagnato da zucchine, peperoni, melanzane",
+                "Al vapore"));
+        menuVegano.aggiungiPortata(new SecondiPiatti("Seitan al vino bianco con funghi", 16.50,
+                "Fette di Seitan saltate in padella, funghi, sfumatura di vino bianco", "In padella"));
+        //Creazione del menu carnivoro
+        Menu menuCarnivoro = new Menu("Menu Carnivoro", TipoMenuEnum.CARNIVORO);
+        //Aggiunti antipasti
+        menuCarnivoro.aggiungiPortata(new Antipasti("Si", " Fritto misto x 2 persone ", 15.00,
+                " Ingredienti: gamberi, triglie, sarde, calamari, pesciolini vari, moscardini "));
+        menuCarnivoro.aggiungiPortata(new Antipasti("Si", " Insalata di polpo ", 10.00,
                 " polpo, prezzemolo, succo di limone, aglio "));
-
-
-        // // Aggiunta delle portate: Primi piatti
-        menu.aggiungiPortata(new PrimiPiatti("Linguine con vongole", 18.00,
+        menuCarnivoro.aggiungiPortata(new Antipasti("No", "Carpaccio di manzo", 11.50,
+                "Fettine sottili di manzo, rucola, scaglie di parmiggiano, olio d'oliva, sale"));
+        //Aggiunti primi piatti
+        menuCarnivoro.aggiungiPortata(new PrimiPiatti("Linguine con vongole", 18.00,
                 "Pasta, vongole fresche, prezzemolo, aglio, olio evo", "Linguine"));
-        menu.aggiungiPortata(new PrimiPiatti("Carbonara", 16.00,
+        menuCarnivoro.aggiungiPortata(new PrimiPiatti("Carbonara", 16.00,
                 "Pasta, guanciale, pecorino romano, tuorlo, pepe", "Rigatoni"));
-        menu.aggiungiPortata(new PrimiPiatti("Spaghetti ai ricci di mare e gamberi", 18.00,
-                "spaghetti, ricci di mare, gamberetti, prezzemolo, aglio, vino bianco," +
-                        "olio extravergine d'oliva, pepe, peperoncino, sale", "spaghetti"));
-        menu.aggiungiPortata(new PrimiPiatti("Farfalle Salmone e Panna", 15.00,
-                "farfalle, salmone, panna fresca, vino bianco, cipolla, olio extravergine d'oliva, sale, pepe",
-                "farfalle"));
-        menu.aggiungiPortata(new PrimiPiatti("Risotto Speck e funghi", 12.00,
+        menuCarnivoro.aggiungiPortata(new PrimiPiatti("Risotto Speck e funghi", 12.00,
                 "riso, speck, funghi porcini, brodo vegetale, cipolla, parmigiano, olio d'oliva, sale, pepe",
                 "riso"));
-
-        // Aggiunta delle portate: Secondi piatti
-        menu.aggiungiPortata(new SecondiPiatti("Involtini al pesce spada gratinati al pistacchio", 18.50d,
+        //Aggiunti secondi piatti
+        menuCarnivoro.aggiungiPortata(new SecondiPiatti("Involtini al pesce spada gratinati al pistacchio", 18.50d,
                 "fettine di pesce spada, pangrattato, pistacchi tritati, olio d'oliva, aglio, prezzemolo, sale, pepe, limone", "Al forno"));
-        menu.aggiungiPortata(new SecondiPiatti("Spiedini di gamberi", 11.00,
-                "gamberi, olio d'oliva, aglio, prezzemolo, limone, sale, pepe", "cottura su piastra"));
-        menu.aggiungiPortata(new SecondiPiatti("Fiorentina al Kg", 43.00,
+        menuCarnivoro.aggiungiPortata(new SecondiPiatti("Fiorentina al Kg", 43.00,
                 "bistecca di manzo (T-bone), olio d'oliva, sale grosso, pepe nero", "alla brace"));
-        menu.aggiungiPortata(new SecondiPiatti("Carne alla pizzaiola", 14.00,
-                "fettine di carne di manzo, passata di pomodoro, aglio, origano, olio d'oliva, sale", "in pentola"));
-        menu.aggiungiPortata(new SecondiPiatti("Cozze gratinate", 11.50,
+        menuCarnivoro.aggiungiPortata(new SecondiPiatti("Cozze gratinate", 11.50,
                 "cozze, pangrattato, aglio, prezzemolo, olio d'oliva, sale, pepe",  "al forno"));
+        Menu menuDessert = new Menu("Dessert", TipoMenuEnum.DESSERT);
 
         // Aggiunta delle portate: Dessert
-        menu.aggiungiPortata(new Dessert("Cannolo Siciliano",8.00,
+        menuDessert.aggiungiPortata(new Dessert("Cannolo Siciliano",8.00,
                 "farina'00', burro, cacao, zucchero, sale, ricotta di mucca, " +
                         "amido di mais modificato, vanillina ", false));
-        menu.aggiungiPortata(new Dessert("Tiramisu'", 8.00,"mascarpone, uova, savoiardi, " +
+        menuDessert.aggiungiPortata(new Dessert("Tiramisu'", 8.00,"mascarpone, uova, savoiardi, " +
                 "zucchero, caffè, cacao amaro in polvere",true));
-        menu.aggiungiPortata(new Dessert("Torta al limone", 12.00," farina'00', zucchero, " +
+        menuDessert.aggiungiPortata(new Dessert("Torta al limone", 12.00," farina'00', zucchero, " +
                 "uova, olio di semi, succo di limone, scorza di limone, lievito, burro, sale", true ));
-        menu.aggiungiPortata(new Dessert("Torta della nonna ", 12.00," farina'00', burro," +
+        menuDessert.aggiungiPortata(new Dessert("Torta della nonna ", 12.00," farina'00', burro," +
                 " zucchero a velo, uova, scorza di limone, sale, lievito, latte intero, zucchero, amido di mais, amido di riso, pinoli", true));
-        menu.aggiungiPortata(new Dessert("Sorbetto al cantalupo", 8.00,"acqua, succo di limone," +
+        menuDessert.aggiungiPortata(new Dessert("Sorbetto al cantalupo", 8.00,"acqua, succo di limone," +
                 " scorza di limone, melone cantalupo, zucchero, sale", true));
 
-        // Stampa del menu
-        menu.stampaMenu();
+        //Stampa dei menu
+        menuVegetariano.stampaMenu();
+        menuVegano.stampaMenu();
+        menuCarnivoro.stampaMenu();
+        menuDessert.stampaMenu();
 
-        //prova stampa ristorante
-        Ristorante ciccio = new Ristorante("Da ciccio", "Ciccio");
+        //Aggiunge menu al ristorante
+        ristorante.aggiungiMenu(menuVegetariano);
+        ristorante.aggiungiMenu(menuVegano);
+        ristorante.aggiungiMenu(menuCarnivoro);
+        ristorante.aggiungiMenu(menuDessert);
 
-        ciccio.aggiungiMenu(menu);
-
-        ciccio.stampaDettagliRistorante();
-
-
-
+        ristorante.stampaDettagliRistorante();
     }
 }
