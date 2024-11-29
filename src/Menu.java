@@ -2,8 +2,12 @@ import java.util.ArrayList;
 
 public class Menu {
     private ArrayList<Portate> portate;
+    private String nomeMenu;
+    private TipoMenuEnum tipo;
 
-    public Menu() {
+    public Menu(String nomeMenu, TipoMenuEnum tipo) {
+        this.nomeMenu = nomeMenu;
+        this.tipo = tipo;
         this.portate = new ArrayList<>();
     }
 
@@ -12,10 +16,31 @@ public class Menu {
         portate.add(portata);
     }
 
+    public String getNomeMenu() {
+        return nomeMenu;
+    }
 
+    public void setNomeMenu(String nomeMenu) {
+        this.nomeMenu = nomeMenu;
+    }
+
+    public TipoMenuEnum getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoMenuEnum tipo) {
+        this.tipo = tipo;
+    }
 
     // Metodo per stampare tutte le portate
     public void stampaMenu() {
+        //stampa il Menù
+        System.out.println(ColorEnum.VIOLA.getCodiceColore() + "Menù: " + nomeMenu + " (" + tipo + ")" + ColorEnum.RESET.getCodiceColore());
+        for (Portate portata : portate) {
+            portata.stampaDettagliPortata();
+            }
+
+
         // Stampa Antipasti
         System.out.println("Antipasti:");
         for (Portate portata : portate) {

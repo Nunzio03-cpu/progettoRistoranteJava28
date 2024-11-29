@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Menu del Ristorante:");
 
         // Creazione del menu
-        Menu menu = new Menu();
+        Menu menu = new Menu("cc", TipoMenuEnum.VEGETARIANO);
 
         // Aggiunta delle portate: Antipasti
         menu.aggiungiPortata(new Antipasti(  "Si","Bruschette con pomodorini ",12.00,
