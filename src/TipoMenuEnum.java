@@ -1,8 +1,7 @@
 public enum TipoMenuEnum {
     CARNIVORO("piatto carnivoro"),
     VEGETARIANO("Piatto vegetariano"),
-    VEGANO("Piatto vegano"),
-    DESSERT("Dessert");
+    VEGANO("Piatto vegano");
 
     private String tipologia;
 

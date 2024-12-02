@@ -43,12 +43,17 @@ public class Ristorante {
         this.listaMenu.remove(menu);
     }
 
-    public void stampaDettagliRistorante(){
-        System.out.println("Nome ristorante: " +this.nomeRistorante);
-        System.out.println("Nome dello chef: " +this.chef);
-        System.out.println("Menù che offre il ristorante:");
+    public void stampaDettagliRistorante(TipoMenuEnum tipo){
+
         for (Menu menu : listaMenu){
-            System.out.println(menu.getNomeMenu() +" "+menu.getTipo());
+            if(menu.getTipo() == tipo){
+                menu.stampaMenu();
+            }
         }
+
+
+
+
     }
+
 }

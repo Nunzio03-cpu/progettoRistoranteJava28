@@ -35,10 +35,7 @@ public class Menu {
     // Metodo per stampare tutte le portate
     public void stampaMenu() {
         //stampa il Menù
-        System.out.println(ColorEnum.VIOLA.getCodiceColore() + "Menù: " + nomeMenu + " (" + tipo + ")" + ColorEnum.RESET.getCodiceColore());
-        for (Portate portata : portate) {
-            portata.stampaDettagliPortata();
-            }
+        System.out.println(ColorEnum.VIOLA.getCodiceColore() + "Menù: " + nomeMenu + ColorEnum.RESET.getCodiceColore());
 
 
         // Stampa Antipasti
@@ -71,6 +68,8 @@ public class Menu {
                 portata.stampaDettagliPortata();
             }
         }
-        System.out.printf("%-151s %s"," ", "Coperto a persona: 2,50 €");
+
+        System.out.println();
+
     }
 }
