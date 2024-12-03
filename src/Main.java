@@ -40,12 +40,12 @@ public class Main {
 
         //Aggiunti dessert
         menuVegetariano.aggiungiPortata(new Dessert("Tiramisu'", 8.00,"mascarpone, uova, savoiardi, " +
-                "zucchero, caffè, cacao amaro in polvere",true));
+                "zucchero, caffè, cacao amaro in polvere","Prodotto vegetariano"));
         menuVegetariano.aggiungiPortata(new Dessert("Torta al limone", 12.00," farina'00', zucchero, " +
-                "uova, olio di semi, succo di limone, scorza di limone, lievito, burro, sale", true ));
+                "uova, olio di semi, succo di limone, scorza di limone, lievito, burro, sale", "Prodotto vegetariano" ));
         menuVegetariano.aggiungiPortata(new Dessert("Cannolo Siciliano",8.00,
                 "farina'00', burro, cacao, zucchero, sale, ricotta di mucca, " +
-                        "amido di mais modificato, vanillina ", true));
+                        "amido di mais modificato, vanillina ", "Prodotto vegetariano"));
 
 
         //Creazione menu vegano
@@ -77,8 +77,12 @@ public class Main {
                 "Fette di Seitan saltate in padella, funghi, sfumatura di vino bianco", "In padella"));
 
         //Aggiunti dessert
-        menuVegano.aggiungiPortata(new Dessert("Sorbetto al cantalupo", 8.00,"acqua, succo di limone," +
-                " scorza di limone, melone cantalupo, zucchero, sale", true));
+        menuVegano.aggiungiPortata(new Dessert("Sorbetto al cantalupo", 8.00,"acqua, succo di limone,"+
+                " scorza di limone, melone cantalupo, zucchero, sale", "Prodotto vegano"));
+        menuVegano.aggiungiPortata(new Dessert("Cheesecake vegana al mango", 12.00, "Base di biscotti vegani" +
+                "con crema di anacardi e latte di cocco, decorata con gelatina al mango","Prodotto vegano"));
+        menuVegano.aggiungiPortata(new Dessert("Brownies al cioccolato senza latte e uova", 10.00,
+                "Realizzati con latte di mandorla, olio di cocco e farina integrale", "Prodotto vegano"));
 
 
         //Creazione del menu carnivoro
@@ -102,7 +106,7 @@ public class Main {
                 "riso"));
 
         //Aggiunti secondi piatti
-        menuCarnivoro.aggiungiPortata(new SecondiPiatti("Involtini al pesce spada gratinati al pistacchio", 18.50d,
+        menuCarnivoro.aggiungiPortata(new SecondiPiatti("Involtini al pesce spada gratinati al pistacchio", 18.50,
                 "fettine di pesce spada, pangrattato, pistacchi tritati, olio d'oliva, aglio, prezzemolo, sale, pepe, limone", "Al forno"));
         menuCarnivoro.aggiungiPortata(new SecondiPiatti("Fiorentina al Kg", 43.00,
                 "bistecca di manzo (T-bone), olio d'oliva, sale grosso, pepe nero", "alla brace"));
@@ -110,6 +114,12 @@ public class Main {
                 "cozze, pangrattato, aglio, prezzemolo, olio d'oliva, sale, pepe",  "al forno"));
 
         //Aggiunti Dessert
+        menuCarnivoro.aggiungiPortata(new Dessert("Cioccolatini al bacon croccante", 11.50,
+                "Cioccolato fondente ripieno con piccoli pezzi di bacon caramellato", "Prodotto carnivoro"));
+        menuCarnivoro.aggiungiPortata(new Dessert("Budino al lardo e miele", 9.00,
+                "Crema dolce al miele con una nota affumicata di lardo fuso", "Prodotto carnivoro"));
+        menuCarnivoro.aggiungiPortata(new Dessert("Gelato al foie gras e fichi", 12.50,
+                "Gelato gourmet con una base dolce e un tocco di foie gras montato con fichi caramellati", "Prodotto carnivoro"));
 
 
         //Aggiunge menu al ristorante
