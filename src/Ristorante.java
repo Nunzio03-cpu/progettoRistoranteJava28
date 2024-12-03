@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+//todo implementare la stampa nella classe ristorante
 public class Ristorante {
     private String nomeRistorante;
     private String chef;
@@ -43,6 +43,7 @@ public class Ristorante {
         this.listaMenu.remove(menu);
     }
 
+    //todo reinserire il nome del ristorante e lo chef dentro stampaDettagliRistorante
     public void stampaDettagliRistorante(TipoMenuEnum tipo){
 
         for (Menu menu : listaMenu){

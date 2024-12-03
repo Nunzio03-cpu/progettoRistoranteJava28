@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -134,5 +131,10 @@ public class Main {
         ristorante.stampaDettagliRistorante(TipoMenuEnum.CARNIVORO);
 
         System.out.printf("%-151s %s"," ", "Coperto a persona: 2,50 €");
+
+        //todo creare un cliente (tipo)
+        //todo creare una classe o gestire il ristorante la possibilità di gestire il cliente al ristorante
+        //todo inserire un nuovo campo in ristorante di nome coperti
+        //todo ristorante.stampaPrenotazioni che stampa tutte le prenotazioni effettuate (prenotazione con orario e data)
     }
 }
