@@ -1,26 +1,26 @@
 public class Dessert extends Portate{
 
-    private boolean vegetariano;
+    private String tipoProdotto;
 
     //Costruttore
-    public Dessert(String nomePortata, Double prezzo, String ingredienti,boolean vegetariano) {
+    public Dessert(String nomePortata, Double prezzo, String ingredienti, String tipoProdotto) {
         super(nomePortata, prezzo, ingredienti);
-        this.vegetariano = vegetariano;
+        this.tipoProdotto = tipoProdotto;
     }
 
-
-    public boolean isVegetariano() {
-        return vegetariano;
+    public String getTipoProdotto() {
+        return tipoProdotto;
     }
 
-    public void setVegetariano(boolean vegetariano) {
-        this.vegetariano = vegetariano;
+    public void setTipoProdotto(String tipoProdotto) {
+        this.tipoProdotto = tipoProdotto;
     }
+
     //Metodo in override
     @Override
     public void stampaDettagliPortata() {
         super.stampaDettagliPortata();
-        System.out.println(ColorEnum.VERDE.getCodiceColore() + "Prodotto vegetariano: "+ (isVegetariano() ? "Si":"No") + ColorEnum.RESET.getCodiceColore());
+        System.out.println(ColorEnum.VERDE.getCodiceColore() +"Tipo di prodotto: " + getTipoProdotto() + ColorEnum.RESET.getCodiceColore());
         System.out.println();
     }
 }

@@ -3,7 +3,8 @@ public enum ColorEnum {
     GIALLO("\u001B[33m"), // utilizzo per nome del piatto
     ROSSO("\u001B[31m"), // utilizzo per prezzo
     BLU("\u001B[34m"), //utilizzo per ingredienti
-    VERDE("\u001B[32m");  // field aggiuntivo in ogni classe figlia
+    VERDE("\u001B[32m"),// field aggiuntivo in ogni classe figlia
+    VIOLA("\u001B[35m");// utilizzo per nome Menù
 
 
     private String codiceColore;
@@ -14,5 +15,9 @@ public enum ColorEnum {
 
     public String getCodiceColore() {
         return codiceColore;
+    }
+
+    public void setCodiceColore(String codiceColore) {
+        this.codiceColore = codiceColore;
     }
 }
