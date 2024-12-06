@@ -1,13 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-
-        //prova stampa ristorante
-        System.out.println();
-        Ristorante ristorante = new Ristorante("Da Chef Marco", "Marco Brazorf");
-        System.out.println("Nome ristorante: " + ristorante.getNomeRistorante() + ", nome dello chef: " + ristorante.getChef());
-        System.out.println();
-        System.out.println("Menù che offre il ristorante:");
-
+        Ristorante ristorante = new Ristorante("Da Chef Marco", "Marco Brazorf", 35);
         // Creazione del menu
         Menu menuVegetariano = new Menu("Menu Vegetariano", TipoMenuEnum.VEGETARIANO);
 
@@ -130,7 +123,6 @@ public class Main {
         ristorante.stampaDettagliRistorante(TipoMenuEnum.VEGANO);
         ristorante.stampaDettagliRistorante(TipoMenuEnum.CARNIVORO);
 
-        System.out.printf("%-151s %s"," ", "Coperto a persona: 2,50 €");
 
         //todo creare un cliente (tipo)
         //todo creare una classe o gestire il ristorante la possibilità di gestire il cliente al ristorante
