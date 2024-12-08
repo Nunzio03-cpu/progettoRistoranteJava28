@@ -8,8 +8,8 @@ public class Cliente {
     private Integer coperti;
     private OffsetDateTime dataPrenotazione;
 
-    public Cliente(OffsetDateTime dataPrenotazione, String cognome, Integer coperti, String nome) {
-        this.dataPrenotazione = dataPrenotazione;
+    public Cliente(String cognome, String nome , Integer coperti) {
+        this.dataPrenotazione = OffsetDateTime.now();
         this.cognome = cognome;
         this.coperti = coperti;
         this.nome = nome;

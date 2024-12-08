@@ -4,12 +4,16 @@ public class Ristorante {
     private String chef;
     private ArrayList<Menu> listaMenu;
     private Integer numeroMassimoCoperti;
+    private Integer copertiDisponibili;
+    private ArrayList<Cliente> clienti;
 
     public Ristorante(String nomeRistorante, String chef, Integer numeroMassimoCoperti) {
         this.nomeRistorante = nomeRistorante;
         this.chef = chef;
         this.listaMenu = new ArrayList<>();
         this.numeroMassimoCoperti = numeroMassimoCoperti;
+        this.copertiDisponibili = numeroMassimoCoperti;
+        this.clienti = new ArrayList<>();
     }
 
     public String getNomeRistorante() {
@@ -52,7 +56,22 @@ public class Ristorante {
         this.listaMenu.remove(menu);
     }
 
-    //todo reinserire il nome del ristorante e lo chef dentro stampaDettagliRistorante
+    public Integer getCopertiDisponibili() {
+        return copertiDisponibili;
+    }
+
+    public void setCopertiDisponibili(Integer copertiDisponibili) {
+        this.copertiDisponibili = copertiDisponibili;
+    }
+
+    public ArrayList<Cliente> getClienti() {
+        return clienti;
+    }
+
+    public void setClienti(ArrayList<Cliente> clienti) {
+        this.clienti = clienti;
+    }
+
     public void stampaDettagliRistorante(TipoMenuEnum tipo){
         System.out.println();
         System.out.println("Nome ristorante: " + this.nomeRistorante + ", nome dello chef: " + this.chef);
@@ -66,4 +85,15 @@ public class Ristorante {
         System.out.printf("%-151s %s"," ", "Coperto a persona: 2,50 €");
     }
 
+    public boolean prenotaCliente (Cliente cliente){
+        if (copertiDisponibili >= cliente.getCoperti()){
+            clienti.add(cliente);
+            copertiDisponibili -= cliente.getCoperti();
+            System.out.println("Prenotazione effettuata per " + cliente.getNome() + " " + cliente.getCognome());
+            return true;
+        } else {
+            System.out.println("Prenotazione non effettuata.");
+            return false;
+        }
+    }
 }

@@ -124,9 +124,13 @@ public class Main {
         ristorante.stampaDettagliRistorante(TipoMenuEnum.CARNIVORO);
 
 
-        //todo creare un cliente (tipo)
-        //todo creare una classe o gestire il ristorante la possibilità di gestire il cliente al ristorante
-        //todo inserire un nuovo campo in ristorante di nome coperti
-        //todo ristorante.stampaPrenotazioni che stampa tutte le prenotazioni effettuate (prenotazione con orario e data)
+
+        Cliente cliente1 = new Cliente("Brancollo", "Gino", 10);
+        Cliente cliente2 = new Cliente("Branco", "Pino", 20);
+        Cliente cliente3 = new Cliente("Bello", "Mino", 7);
+
+        ristorante.prenotaCliente(cliente1);
+        ristorante.prenotaCliente(cliente2);
+        ristorante.prenotaCliente(cliente3);
     }
 }
