@@ -11,6 +11,14 @@ public class Menu {
         this.portate = new ArrayList<>();
     }
 
+    public ArrayList<Portate> getPortate() {
+        return portate;
+    }
+
+    public void setPortate(ArrayList<Portate> portate) {
+        this.portate = portate;
+    }
+
     // Metodo per aggiungere una portata
     public void aggiungiPortata(Portate portata) {
         portate.add(portata);

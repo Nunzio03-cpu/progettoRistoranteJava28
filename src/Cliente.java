@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -6,13 +7,23 @@ public class Cliente {
     private String nome;
     private String cognome;
     private Integer coperti;
-    private OffsetDateTime dataPrenotazione;
+    private LocalDateTime dataPrenotazione;
+    private TipoMenuEnum tipoMenu;
 
-    public Cliente(String cognome, String nome , Integer coperti) {
-        this.dataPrenotazione = OffsetDateTime.now();
+    public Cliente(String cognome, String nome , Integer coperti, LocalDateTime dataPrenotazione, TipoMenuEnum tipoMenu) {
+        this.dataPrenotazione = dataPrenotazione;
         this.cognome = cognome;
         this.coperti = coperti;
         this.nome = nome;
+        this.tipoMenu = tipoMenu;
+    }
+
+    public TipoMenuEnum getTipoMenu() {
+        return tipoMenu;
+    }
+
+    public void setTipoMenu(TipoMenuEnum tipoMenu) {
+        this.tipoMenu = tipoMenu;
     }
 
     public String getNome() {
@@ -23,11 +34,11 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public OffsetDateTime getDataPrenotazione() {
+    public LocalDateTime getDataPrenotazione() {
         return dataPrenotazione;
     }
 
-    public void setDataPrenotazione(OffsetDateTime dataPrenotazione) {
+    public void setDataPrenotazione(LocalDateTime dataPrenotazione) {
         this.dataPrenotazione = dataPrenotazione;
     }
 
@@ -47,8 +58,4 @@ public class Cliente {
         this.cognome = cognome;
     }
 
-    public void stampaDettagliData() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-        System.out.println("Cliente: " + getNome() + " " + getCognome() + " - Coperti: " + getCoperti() + " - Prenotazione: " + dataPrenotazione.format(formatter));
-    }
 }
