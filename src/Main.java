@@ -1,16 +1,9 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 public class Main {
     public static void main(String[] args) {
-
-        //prova stampa ristorante
-        System.out.println();
-        Ristorante ristorante = new Ristorante("Da Chef Marco", "Marco Brazorf");
-        System.out.println("Nome ristorante: " + ristorante.getNomeRistorante() + ", nome dello chef: " + ristorante.getChef());
-        System.out.println();
-        System.out.println("Menù che offre il ristorante:");
-
+        Ristorante ristorante = new Ristorante("Da Chef Marco", "Marco Brazorf", 35);
         // Creazione del menu
         Menu menuVegetariano = new Menu("Menu Vegetariano", TipoMenuEnum.VEGETARIANO);
 
@@ -127,12 +120,22 @@ public class Main {
         ristorante.aggiungiMenu(menuVegano);
         ristorante.aggiungiMenu(menuCarnivoro);
 
+        //Prenotazioni del cliente
+        Cliente cliente1 = new Cliente("Brancollo", "Gino", 10, LocalDateTime.of(2024, 12, 9, 19, 30),TipoMenuEnum.VEGETARIANO);
+        Cliente cliente2 = new Cliente("Branco", "Pino", 20, LocalDateTime.of(2024, 12, 9, 19, 30), TipoMenuEnum.CARNIVORO);
+        Cliente cliente3 = new Cliente("Bello", "Mino", 7, LocalDateTime.of(2024, 12, 9, 19, 30), TipoMenuEnum.VEGANO);
+
+    //    ristorante.stampaDettagliRistorante(TipoMenuEnum.VEGETARIANO);
+    //    ristorante.stampaDettagliRistorante(TipoMenuEnum.VEGANO);
+    //    ristorante.stampaDettagliRistorante(TipoMenuEnum.CARNIVORO);
+
+        ristorante.stampaDettagliRistorante();
+
+        ristorante.prenotaCliente(cliente1);
+        ristorante.prenotaCliente(cliente2);
+        ristorante.prenotaCliente(cliente3);
 
 
-        ristorante.stampaDettagliRistorante(TipoMenuEnum.VEGETARIANO);
-        ristorante.stampaDettagliRistorante(TipoMenuEnum.VEGANO);
-        ristorante.stampaDettagliRistorante(TipoMenuEnum.CARNIVORO);
-
-        System.out.printf("%-151s %s"," ", "Coperto a persona: 2,50 €");
+        ristorante.stampaPrenotazioni();
     }
 }

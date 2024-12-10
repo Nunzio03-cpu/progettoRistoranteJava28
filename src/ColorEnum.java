@@ -1,5 +1,6 @@
 public enum ColorEnum {
     RESET("\u001B[0m"),
+    CYAN("\u001B[36m"),// utilizzo per nome ristorante nome chef
     GIALLO("\u001B[33m"), // utilizzo per nome del piatto
     ROSSO("\u001B[31m"), // utilizzo per prezzo
     BLU("\u001B[34m"), //utilizzo per ingredienti
