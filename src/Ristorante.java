@@ -78,6 +78,7 @@ public class Ristorante {
         System.out.println();
         System.out.println(ColorEnum.CYAN.getCodiceColore() + "Nome ristorante: " + this.nomeRistorante + ", nome dello chef: " + this.chef + ColorEnum.RESET.getCodiceColore());
         System.out.println();
+        //todo eliminare il commento
        // System.out.println("Menù che offre il ristorante:");
 /*
 
@@ -115,9 +116,10 @@ public class Ristorante {
         System.out.println(); */
     }
 
-
+    //todo aggiungi un metodo per rimuovere le prenotazioni
+    //todo creare una classe prenotazione
+    //todo creare una classe per la gestione finanziaria del ristorante
     public void prenotaCliente(Cliente cliente) {
-
         if (copertiDisponibili >= cliente.getCoperti()) {
             clienti.add(cliente);
             copertiDisponibili -= cliente.getCoperti();
@@ -128,6 +130,8 @@ public class Ristorante {
         }
     }
 
+    //todo ridurre il numero di azioni fatte da stampaPrenotazioni
+    //todo creare un metodo per scegliere il menu per il cliente
     public void stampaPrenotazioni() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         for (Cliente cliente : clienti) {
@@ -150,7 +154,3 @@ public class Ristorante {
 
     }
 }
-
-
-
-
