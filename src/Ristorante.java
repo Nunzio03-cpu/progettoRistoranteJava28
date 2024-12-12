@@ -139,18 +139,18 @@ public class Ristorante {
 
             System.out.println(" prenotazione: " + cliente.getDataPrenotazione().format(formatter) +
                     ", per il " + cliente.getCoperti() + " persona/persone, " + " menu scelto: " + cliente.getTipoMenu());
-
-            System.out.println("Menu scelto: " + cliente.getTipoMenu());
-            for (Menu menu : listaMenu) {
-                if (menu.getTipo() == cliente.getTipoMenu()) {
-                    menu.stampaMenu();
-                    break;
-                }
-
-            }
-            System.out.printf("%-151s %s", " ", "Coperto a persona: 2,50 €");
-            System.out.println();
         }
 
+    }
+    public void sceltaMenu (TipoMenuEnum menu){
+        System.out.println("Menu scelto: " + menu);
+        for (Menu menu1 : listaMenu) {
+            if (menu1.getTipo() == menu) {
+                menu1.stampaMenu();
+                break;
+            }
+        }
+        System.out.printf("%-151s %s", " ", "Coperto a persona: 2,50 €");
+        System.out.println();
     }
 }

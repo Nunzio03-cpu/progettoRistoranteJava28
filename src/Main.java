@@ -137,5 +137,7 @@ public class Main {
 
 
         ristorante.stampaPrenotazioni();
+
+        ristorante.sceltaMenu(TipoMenuEnum.CARNIVORO);
     }
 }
