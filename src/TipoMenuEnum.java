@@ -1,4 +1,5 @@
 public enum TipoMenuEnum {
+    FISSO("menu fisso"),
     CARNIVORO("Piatti carnivori"),
     VEGETARIANO("Piatti vegetariani"),
     VEGANO("Piatti vegani");

@@ -3,7 +3,7 @@ import java.time.OffsetDateTime;
 
 public class Main {
     public static void main(String[] args) {
-        Ristorante ristorante = new Ristorante("Da Chef Marco", "Marco Brazorf", 35);
+        Ristorante ristorante = new Ristorante("Da Chef Marco", "Marco Brazorf");
         // Creazione del menu
         Menu menuVegetariano = new Menu("Menu Vegetariano", TipoMenuEnum.VEGETARIANO);
 
@@ -121,9 +121,9 @@ public class Main {
         ristorante.aggiungiMenu(menuCarnivoro);
 
         //Prenotazioni del cliente
-        Cliente cliente1 = new Cliente("Brancollo", "Gino", 10, LocalDateTime.of(2024, 12, 9, 19, 30),TipoMenuEnum.VEGETARIANO);
-        Cliente cliente2 = new Cliente("Branco", "Pino", 20, LocalDateTime.of(2024, 12, 9, 19, 30), TipoMenuEnum.CARNIVORO);
-        Cliente cliente3 = new Cliente("Bello", "Mino", 7, LocalDateTime.of(2024, 12, 9, 19, 30), TipoMenuEnum.VEGANO);
+        Cliente cliente1 = new Cliente("Gino Brancollo", 10, LocalDateTime.of(2024, 12, 9, 19, 30),TipoMenuEnum.VEGETARIANO);
+        Cliente cliente2 = new Cliente("Pino Branco", 20, LocalDateTime.of(2024, 12, 9, 19, 30), TipoMenuEnum.CARNIVORO);
+        Cliente cliente3 = new Cliente(" Mino Bello", 7, LocalDateTime.of(2024, 12, 9, 19, 30), TipoMenuEnum.VEGANO);
 
     //    ristorante.stampaDettagliRistorante(TipoMenuEnum.VEGETARIANO);
     //    ristorante.stampaDettagliRistorante(TipoMenuEnum.VEGANO);
@@ -131,11 +131,15 @@ public class Main {
 
         ristorante.stampaDettagliRistorante();
 
-        ristorante.prenotaCliente(cliente1);
-        ristorante.prenotaCliente(cliente2);
-        ristorante.prenotaCliente(cliente3);
+        ristorante.sceltaMenu(TipoMenuEnum.CARNIVORO);
 
+        Prenotazione prenotazione = new Prenotazione();
+        prenotazione.prenotaCliente(cliente1);
+        prenotazione.prenotaCliente(cliente2);
+        prenotazione.prenotaCliente(cliente3);
 
-        ristorante.stampaPrenotazioni();
+        prenotazione.cancellaPrenotazioneCliente(cliente2);
+
+        prenotazione.stampaPrenotazioni();
     }
 }
