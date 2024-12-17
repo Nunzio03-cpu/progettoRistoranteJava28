@@ -4,17 +4,15 @@ import java.time.format.DateTimeFormatter;
 
 public class Cliente {
 
-    private String nome;
-    private String cognome;
+    private String nomeCompleto;
     private Integer coperti;
     private LocalDateTime dataPrenotazione;
     private TipoMenuEnum tipoMenu;
 
-    public Cliente(String cognome, String nome , Integer coperti, LocalDateTime dataPrenotazione, TipoMenuEnum tipoMenu) {
+    public Cliente(String nomeCompleto , Integer coperti, LocalDateTime dataPrenotazione, TipoMenuEnum tipoMenu) {
         this.dataPrenotazione = dataPrenotazione;
-        this.cognome = cognome;
         this.coperti = coperti;
-        this.nome = nome;
+        this.nomeCompleto = nomeCompleto;
         this.tipoMenu = tipoMenu;
     }
 
@@ -26,12 +24,12 @@ public class Cliente {
         this.tipoMenu = tipoMenu;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeCompleto() {
+        return nomeCompleto;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
     }
 
     public LocalDateTime getDataPrenotazione() {
@@ -48,14 +46,6 @@ public class Cliente {
 
     public void setCoperti(Integer coperti) {
         this.coperti = coperti;
-    }
-
-    public String getCognome() {
-        return cognome;
-    }
-
-    public void setCognome(String cognome) {
-        this.cognome = cognome;
     }
 
 }
