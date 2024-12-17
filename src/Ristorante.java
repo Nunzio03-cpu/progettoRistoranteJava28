@@ -1,3 +1,4 @@
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 public class Ristorante {
     private String nomeRistorante;
@@ -56,7 +57,7 @@ public class Ristorante {
                 break;
             }
         }
-        System.out.printf("%-151s %s", " ", "Coperto a persona: 2,50 €");
+        System.out.printf("%-151s %s", " ", "Coperto a persona: 2.50 €");
         System.out.println();
     }
 }
