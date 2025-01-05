@@ -141,5 +141,13 @@ public class Main {
         prenotazione.cancellaPrenotazioneCliente(cliente2);
 
         prenotazione.stampaPrenotazioni();
+
+        GestioneFinanziaria gestioneFinanziaria = new GestioneFinanziaria();
+
+        gestioneFinanziaria.calcolaTotale(menuCarnivoro, 2);
+
+        Ordinazione ordinazione = new Ordinazione(cliente1);
+        ordinazione.aggiungiPortataScelta(menuCarnivoro.getPortate().get(0));
+        ordinazione.stampaOrdinazioni(cliente1);
     }
 }
