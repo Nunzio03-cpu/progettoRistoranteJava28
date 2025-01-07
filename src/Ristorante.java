@@ -1,10 +1,15 @@
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+
+
 import java.util.Iterator;
 
 public class Ristorante {
     private String nomeRistorante;
     private String chef;
     private ArrayList<Menu> listaMenu;
+    private ArrayList<Prenotazione> prenotazioni; // Per gestire prenotazioni
+    private ArrayList<Ordinazione> ordinazioni;   // Per gestire ordinazioni
     private Integer copertiDisponibili;
     private ArrayList<Cliente> clienti;
 
@@ -12,6 +17,8 @@ public class Ristorante {
         this.nomeRistorante = nomeRistorante;
         this.chef = chef;
         this.listaMenu = new ArrayList<>();
+        this.prenotazioni = new ArrayList<>();
+        this.ordinazioni = new ArrayList<>();
         this.copertiDisponibili = 35;
         this.clienti = new ArrayList<>();
     }
@@ -54,6 +61,22 @@ public class Ristorante {
 
     public void rimuoviMenu(Menu menu) {
         this.listaMenu.remove(menu);
+    }
+
+    public ArrayList<Prenotazione> getPrenotazioni() {
+        return prenotazioni;
+    }
+
+    public ArrayList<Ordinazione> getOrdinazioni() {
+        return ordinazioni;
+    }
+
+    public void setPrenotazioni(ArrayList<Prenotazione> prenotazioni) {
+        this.prenotazioni = prenotazioni;
+    }
+
+    public void setOrdinazioni(ArrayList<Ordinazione> ordinazioni) {
+        this.ordinazioni = ordinazioni;
     }
 
     public Integer getCopertiDisponibili() {
@@ -103,4 +126,35 @@ public class Ristorante {
         System.out.printf("%-151s %s", " ", "Coperto a persona: 2.50 €");
         System.out.println();
     }
+
+    // Creare una nuova prenotazione
+    public void creaPrenotazione(Cliente cliente) {
+        Prenotazione prenotazione = new Prenotazione();
+        prenotazione.aggiungiCliente(cliente);
+        prenotazioni.add(prenotazione);
+    }
+
+    // Creare una nuova ordinazione
+    public void creaOrdinazione(Cliente cliente) {
+        Ordinazione ordinazione = new Ordinazione(cliente);
+        ordinazioni.add(ordinazione);
+    }
+
+    // Stampa le prenotazioni del ristorante
+    public void stampaPrenotazioni() {
+        System.out.println("Prenotazioni per il ristorante " + nomeRistorante + ":");
+        for (Prenotazione prenotazione : prenotazioni) {
+            prenotazione.stampaPrenotazioni();
+        }
+    }
+
+    // Stampa le ordinazioni del ristorante
+    public void stampaOrdinazioni() {
+        System.out.println("Ordinazioni per il ristorante " + nomeRistorante + ":");
+        for (Ordinazione ordinazione : ordinazioni) {
+            ordinazione.stampaOrdinazioni();
+        }
+    }
+
+
 }

@@ -30,7 +30,7 @@ public class Ordinazione {
         System.out.println(portata.getNomePortata() + " aggiunto all'ordinazione per " + cliente.getNomeCompleto());
     }
 
-    public void stampaOrdinazioni (Cliente cliente) {
+    public void stampaOrdinazioni () {
         System.out.println("Ordinazioni del tavolo prenotato da " + this.cliente.getNomeCompleto());
         if (this.cliente.getNomeCompleto().equals(cliente.getNomeCompleto())){
             for(Portate portate : portateScelte){

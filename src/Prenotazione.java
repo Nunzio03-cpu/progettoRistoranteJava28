@@ -15,6 +15,9 @@ public class Prenotazione {
     public void setClienti(ArrayList<Cliente> clienti) {
         this.clienti = clienti;
     }
+    public void aggiungiCliente(Cliente cliente) {
+        clienti.add(cliente);
+    }
 
     public void stampaPrenotazioni() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
