@@ -1,4 +1,5 @@
 public class GestioneFinanziaria {
+
     // Calcola il prezzo base come somma dei prezzi delle portate nel menu
     public double calcolaPrezzoBase(Menu menu) {
         double totale = 0;
@@ -27,5 +28,6 @@ public class GestioneFinanziaria {
 
         System.out.println("Totale per " + numeroCoperti + " coperti con uno sconto del " + percentualeSconto + "%: " + totaleConSconto + " €"+ " è compreso i 2.50 € coperto a persona");
     }
+
 
 }

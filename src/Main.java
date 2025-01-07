@@ -1,5 +1,4 @@
 import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
 
 public class Main {
     public static void main(String[] args) {
@@ -115,31 +114,52 @@ public class Main {
                 "Gelato gourmet con una base dolce e un tocco di foie gras montato con fichi caramellati", "Prodotto carnivoro"));
 
 
+        Menu menuFisso = new Menu("Menu fisso", TipoMenuEnum.FISSO);
+
+        menuFisso.aggiungiPortata(new Antipasti("Si","Bruschette con pomodorini ",12.00,
+                "Ingredienti:pane casereccio, pomodorini, basilico, olio evo"));
+        menuFisso.aggiungiPortata(new PrimiPiatti("Risotto allo zafferano", 13.00,
+                "Riso cremoso mantecato senza burro, zafferano, sale, pepe", "Riso"));
+        menuFisso.aggiungiPortata(new SecondiPiatti("Involtini al pesce spada gratinati al pistacchio", 18.50,
+                "fettine di pesce spada, pangrattato, pistacchi tritati, olio d'oliva, aglio, prezzemolo, sale, pepe, limone", "Al forno"));
+        menuFisso.aggiungiPortata(new Dessert("Tiramisu'", 8.00,"mascarpone, uova, savoiardi, " +
+                "zucchero, caffè, cacao amaro in polvere","Prodotto vegetariano"));
+
+
         //Aggiunge menu al ristorante
         ristorante.aggiungiMenu(menuVegetariano);
         ristorante.aggiungiMenu(menuVegano);
         ristorante.aggiungiMenu(menuCarnivoro);
+        ristorante.aggiungiMenu(menuFisso);
 
         //Prenotazioni del cliente
         Cliente cliente1 = new Cliente("Gino Brancollo", 10, LocalDateTime.of(2024, 12, 9, 19, 30),TipoMenuEnum.VEGETARIANO);
         Cliente cliente2 = new Cliente("Pino Branco", 20, LocalDateTime.of(2024, 12, 9, 19, 30), TipoMenuEnum.CARNIVORO);
         Cliente cliente3 = new Cliente(" Mino Bello", 7, LocalDateTime.of(2024, 12, 9, 19, 30), TipoMenuEnum.VEGANO);
 
-    //    ristorante.stampaDettagliRistorante(TipoMenuEnum.VEGETARIANO);
-    //    ristorante.stampaDettagliRistorante(TipoMenuEnum.VEGANO);
-    //    ristorante.stampaDettagliRistorante(TipoMenuEnum.CARNIVORO);
 
         ristorante.stampaDettagliRistorante();
 
+        ristorante.creaPrenotazione(cliente1);
+
         ristorante.sceltaMenu(TipoMenuEnum.CARNIVORO);
+        ristorante.sceltaMenu(TipoMenuEnum.FISSO);
 
-        Prenotazione prenotazione = new Prenotazione();
-        prenotazione.prenotaCliente(cliente1);
-        prenotazione.prenotaCliente(cliente2);
-        prenotazione.prenotaCliente(cliente3);
+        ristorante.stampaPrenotazioni();
 
-        prenotazione.cancellaPrenotazioneCliente(cliente2);
+        ristorante.creaOrdinazione(cliente1);
+        ristorante.stampaOrdinazioni();
+        ristorante.prenotaCliente(cliente1);
 
-        prenotazione.stampaPrenotazioni();
+        Ordinazione ordinazione = new Ordinazione(cliente1);
+        ordinazione.aggiungiPortataScelta(menuCarnivoro.getPortate().getFirst());
+        ordinazione.stampaOrdinazioni();
+
+        GestioneFinanziaria gestioneFinanziaria = new GestioneFinanziaria();
+
+        gestioneFinanziaria.calcolaTotale(menuCarnivoro, 2);
+
+
     }
 }
+
