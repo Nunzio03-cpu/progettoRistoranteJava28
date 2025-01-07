@@ -27,5 +27,6 @@ public class Prenotazione {
             System.out.println(" prenotazione: " + cliente.getDataPrenotazione().format(formatter) +
                     ", per il " + cliente.getCoperti() + " persona/persone, " + " menu scelto: " + cliente.getTipoMenu());
         }
+
     }
 }
