@@ -1,11 +1,7 @@
-import java.util.ArrayList;
-
 public class Portate {
     private String nomePortata;
     private Double prezzo;
     private String ingredienti; // tutti gli ingredienti in una sola stringa
-
-
 
     public Portate(String nomePortata, Double prezzo, String ingredienti) {
         this.nomePortata = nomePortata;
@@ -36,7 +32,7 @@ public class Portate {
     public String getIngredienti() {
         return ingredienti;
     }
-    /*Il metodo System.out.printf() in Java è utilizzato per formattare e stampare stringhe seguendo specifici modificatori di formato
+    /**Il metodo System.out.printf() in Java è utilizzato per formattare e stampare stringhe seguendo specifici modificatori di formato
     "%-n.s %s" --> %: Indica che è un segnaposto,
      -n.s partendo da sinistra verso destra indica lo spazio(in caratteri) da occupare vuoto
     n. indica il numero da inserire

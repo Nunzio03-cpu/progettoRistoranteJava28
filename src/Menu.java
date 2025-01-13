@@ -19,7 +19,6 @@ public class Menu {
         this.portate = portate;
     }
 
-    // Metodo per aggiungere una portata
     public void aggiungiPortata(Portate portata) {
         portate.add(portata);
     }
@@ -40,13 +39,13 @@ public class Menu {
         this.tipo = tipo;
     }
 
-    // Metodo per stampare tutte le portate
+    /**
+     * stampaMenu stampa le portate di un menu tramite instanceof
+     */
     public void stampaMenu() {
-        //stampa il Menù
         System.out.println(ColorEnum.VIOLA.getCodiceColore() + "Menù: " + nomeMenu + ColorEnum.RESET.getCodiceColore());
 
 
-        // Stampa Antipasti
         System.out.println("Antipasti:");
         for (Portate portata : portate) {
             if (portata instanceof Antipasti) {
@@ -54,7 +53,6 @@ public class Menu {
             }
         }
 
-        // Stampa Primi Piatti
         System.out.println("Primi piatti:");
         for (Portate portata : portate) {
             if (portata instanceof PrimiPiatti) {
@@ -62,22 +60,18 @@ public class Menu {
             }
         }
 
-        // Stampa Secondi Piatti
         System.out.println("Secondi piatti:");
         for (Portate portata : portate) {
             if (portata instanceof SecondiPiatti) {
                 portata.stampaDettagliPortata();
             }
         }
-        // Stampa Dessert
         System.out.println("Dessert:");
         for (Portate portata : portate) {
             if (portata instanceof Dessert) {
                 portata.stampaDettagliPortata();
             }
         }
-
         System.out.println();
-
     }
 }

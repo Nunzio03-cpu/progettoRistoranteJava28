@@ -1,9 +1,7 @@
 import java.util.ArrayList;
 
-
-import java.util.Iterator;
-
 public class Ristorante {
+    private static final int COPERTI_DISPONIBILI = 35;
     private String nomeRistorante;
     private String chef;
     private ArrayList<Menu> listaMenu;
@@ -18,7 +16,7 @@ public class Ristorante {
         this.listaMenu = new ArrayList<>();
         this.prenotazioni = new ArrayList<>();
         this.ordinazioni = new ArrayList<>();
-        this.copertiDisponibili = 35;
+        this.copertiDisponibili = COPERTI_DISPONIBILI;
         this.clienti = new ArrayList<>();
     }
 
@@ -86,6 +84,9 @@ public class Ristorante {
         this.copertiDisponibili = copertiDisponibili;
     }
 
+    /**
+     *metodi per effettuare  e cancellare la prenotazione del cliente
+     */
     public void prenotaCliente(Cliente cliente) {
         if (copertiDisponibili >= cliente.getCoperti()) {
             this.clienti.add(cliente);
@@ -98,13 +99,10 @@ public class Ristorante {
     }
 
     public void cancellaPrenotazioneCliente (Cliente cliente){
-        Iterator<Cliente> iter = clienti.iterator();
-        while (iter.hasNext()){
-            Cliente clienteC = iter.next();
-            if (clienteC.getNomeCompleto().equalsIgnoreCase(cliente.getNomeCompleto())){
-                iter.remove();
-                System.out.println("Prenotazione di " + clienteC.getNomeCompleto() + " è stata cancellata");
-            }
+        if (clienti.contains(cliente)) {
+            clienti.remove(cliente);
+        } else {
+            System.out.println("Il cliente non è in questo ristorante.");
         }
     }
 
@@ -126,20 +124,17 @@ public class Ristorante {
         System.out.println();
     }
 
-    // Creare una nuova prenotazione
     public void creaPrenotazione(Cliente cliente) {
         Prenotazione prenotazione = new Prenotazione();
         prenotazione.aggiungiCliente(cliente);
         prenotazioni.add(prenotazione);
     }
 
-    // Creare una nuova ordinazione
     public void creaOrdinazione(Cliente cliente) {
         Ordinazione ordinazione = new Ordinazione(cliente);
         ordinazioni.add(ordinazione);
     }
 
-    // Stampa le prenotazioni del ristorante
     public void stampaPrenotazioni() {
         System.out.println("Prenotazioni per il ristorante " + nomeRistorante + ":");
         for (Prenotazione prenotazione : prenotazioni) {
@@ -147,13 +142,10 @@ public class Ristorante {
         }
     }
 
-    // Stampa le ordinazioni del ristorante
     public void stampaOrdinazioni() {
         System.out.println("Ordinazioni per il ristorante " + nomeRistorante + ":");
         for (Ordinazione ordinazione : ordinazioni) {
             ordinazione.stampaOrdinazioni();
         }
     }
-
-
 }

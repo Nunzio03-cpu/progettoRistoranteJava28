@@ -1,8 +1,6 @@
 public class Dessert extends Portate{
-
     private String tipoProdotto;
 
-    //Costruttore
     public Dessert(String nomePortata, Double prezzo, String ingredienti, String tipoProdotto) {
         super(nomePortata, prezzo, ingredienti);
         this.tipoProdotto = tipoProdotto;
@@ -16,7 +14,10 @@ public class Dessert extends Portate{
         this.tipoProdotto = tipoProdotto;
     }
 
-    //Metodo in override
+    /**
+     * Metodo Override che richiama il metodo di stampaDettagliPortata
+     * della classe Portate con aggiunta di un System per il colore
+     */
     @Override
     public void stampaDettagliPortata() {
         super.stampaDettagliPortata();

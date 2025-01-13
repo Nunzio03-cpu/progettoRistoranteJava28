@@ -1,4 +1,8 @@
 public enum ColorEnum {
+    /**
+     * Classe utilizzata per indicare i colori da utilizzare
+     * nei vari System in modo spacifico
+     */
     RESET("\u001B[0m"),
     CYAN("\u001B[36m"),// utilizzo per nome ristorante nome chef
     GIALLO("\u001B[33m"), // utilizzo per nome del piatto

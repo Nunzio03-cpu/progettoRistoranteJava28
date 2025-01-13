@@ -3,7 +3,6 @@ import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Cliente {
-
     private String nomeCompleto;
     private Integer coperti;
     private LocalDateTime dataPrenotazione;

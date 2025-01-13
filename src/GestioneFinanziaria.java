@@ -1,33 +1,37 @@
 public class GestioneFinanziaria {
-
-    // Calcola il prezzo base come somma dei prezzi delle portate nel menu
-    public double calcolaPrezzoBase(Menu menu) {
+    private static final double COSTO_COPERTO = 2.5;
+    /**
+     * calcolaPrezzoBase calcola il conto
+     * return totale + coperto;
+     */
+    private static double calcolaPrezzoBase(Menu menu) {
         double totale = 0;
         for (Portate portata : menu.getPortate()) {
             totale += portata.getPrezzo();
 
         }
-//        System.out.println("Prezzo base per il menu " + menu.getTipo() + ": " + totale + " €");
-
-        return totale + 2.5;
+        return totale + COSTO_COPERTO;
     }
 
-    // Metodo per calcolare il totale senza sconto
-    public double calcolaTotale(Menu menu, int numeroCoperti) {
+    /**
+     * calcolaTotale calcola il prezzo base per il numero di coperti
+     */
+    public static double calcolaTotale(Menu menu, int numeroCoperti) {
         double prezzoBase = calcolaPrezzoBase(menu);
         double totale = prezzoBase * numeroCoperti;
         System.out.println("Totale per " + numeroCoperti + " coperti/o (senza sconto): " + totale + " €" + " è compreso i 2.50 € coperto a persona");
         return totale;
     }
 
-    // Metodo per calcolare il totale con sconto
-    public void calcolaTotaleConSconto(Menu menu, int numeroCoperti, double percentualeSconto) {
+    /**
+     *calcolaTotaleConSconto calcola il totale
+     * ma applica una percentuale di scontistica
+     */
+    public static void calcolaTotaleConSconto(Menu menu, int numeroCoperti, double percentualeSconto) {
         double totale = calcolaTotale(menu, numeroCoperti);
         double sconto = totale * percentualeSconto / 100;
         double totaleConSconto = totale - sconto;
 
         System.out.println("Totale per " + numeroCoperti + " coperti con uno sconto del " + percentualeSconto + "%: " + totaleConSconto + " €"+ " è compreso i 2.50 € coperto a persona");
     }
-
-
 }

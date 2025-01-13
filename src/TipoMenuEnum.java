@@ -1,4 +1,7 @@
 public enum TipoMenuEnum {
+    /**
+     * classe per indicare i tipi di menù
+     */
     FISSO("menu fisso"),
     CARNIVORO("Piatti carnivori"),
     VEGETARIANO("Piatti vegetariani"),

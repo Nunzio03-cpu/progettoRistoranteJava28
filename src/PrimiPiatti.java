@@ -14,6 +14,9 @@ public class PrimiPiatti extends Portate{
         this.tipoPasta = tipoPasta;
     }
 
+    /**
+     * Stampa i dettagli della portata, e specifica il tipo di pasta
+     */
     @Override
     public void stampaDettagliPortata(){
         super.stampaDettagliPortata();
